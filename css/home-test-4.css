@@ -1,0 +1,574 @@
+/****************************************
+* page d'accueil test 
+****************************************/
+
+/***************************************
+* responsive
+***************************************/
+@media only screen and (min-width: 760px) {
+	.singular-page-1070 #container {
+		max-width: 1000px;
+		padding: 3px 0 0;
+	}
+}
+
+/***************************************
+* secondary menu and header
+***************************************/
+@media only screen and (min-width: 760px) {
+
+	.singular-page-1070 #menu-secondary >.wrap {
+		width: 100%;
+	}
+
+	.singular-page-1070 #menu-secondary .menu-items {
+		float: right;
+		background-color: #bc101a;
+		border-radius: 5px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		margin-bottom: 5px;
+	}
+	
+	.singular-page-1070 #menu-secondary {
+		margin: 0 auto 0px;
+		background: none !important;
+		border: none;
+		position: relative;
+		z-index: 125;
+	}
+
+	.singular-page-1070 #header {
+		min-height: 200px;  /* important to display the clipped path */
+		background-image: url('../images/NK3752-Lavender.png');
+		/*
+		* !!!!
+		* see http://cssplant.com/clip-path-generator
+		* to to generate code for firefox and iOS
+		*/
+		/*Chrome,Safari*/
+		-webkit-clip-path: polygon(0px 149px,705px 190px,1060px 132px,1060px 0px,0px 0px);
+
+		/*Firefox*/
+		clip-path: url("#clipPolygon");
+
+		/* iOS support inline encoded svg file*/
+		-webkit-mask: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIwIiBoZWlnaHQ9IjAiPgogIDxjbGlwUGF0aCBpZD0ic3ZnQ2xpcCI+CiAgICA8cGF0aCBpZD0ic3ZnUGF0aCIgZD0iTTAsMTQ5IEw3MDUsMTkwIDEwNjAsMTMyIDEwNjAsMCAwLDAgeiIvPgogIDwvY2xpcFBhdGg+CiAgPHBhdGggaWQ9InN2Z01hc2siIGQ9Ik0wLDE0OSBMNzA1LDE5MCAxMDYwLDEzMiAxMDYwLDAgMCwwIHoiICAvPgo8L3N2Zz4=) no-repeat;
+		background-size: cover;
+		background-repeat: none;
+		background-position: top right;
+		padding: 10px;
+
+	}	
+	
+	.singular-page-1070 hgroup#branding {
+		margin-bottom: -15px;
+		margin-left: 5px;
+	}	
+
+	.singular-page-1070 .ald-unique-logo {
+	  position: relative;
+	  z-index: 10000;  /* must be on top of header */
+	  top: 18px;
+	  left: 10px;
+	}	
+
+	.singular-page-1070 .autre-ald-unique-logo {
+	  position: relative;
+	  z-index: 10000;  /* must be on top of header */
+	  top: -37px;
+	  left: 12px;
+	}
+
+	.singular-page-1070 #sidebar-subsidiary {
+		background: #eee url('../images/utility-bg.png');
+		background-repeat: repeat;
+		background-position: bottom right;
+		background-attachment: scroll;
+		/* 
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		*/
+		padding: 60px 10px 20px 10px
+	}
+		
+	
+}
+
+body.singular-page-1070  {
+	border: none ;
+	background-image: url(http://www.transparenttextures.com/patterns/graphy.png) !important;
+	background-color: whitesmoke;
+	background-repeat: repeat;
+	background-position: top right;
+	background-attachment: scroll;
+}
+}
+
+.singular-page-1070 .ald-unique-logo a img {
+	float:left ;
+	margin-bottom: 0px;
+	padding: 0px;
+	background: rgba(245,245,245,0.7);
+	border: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.singular-page-1070 .autre-ald-unique-logo a img {
+	float:left ;
+	margin-bottom: 0px;
+	padding: 0px;
+	background: whitesmoke;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	/* opacity: 0.9 ; */
+}
+
+.singular-page-1070 #header {
+	margin-top: -45px;
+}
+
+.singular-page-1070 .bouton-contact {
+	background-color: whitesmoke ;
+	padding: 20px 10px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	text-decoration: none;
+	color: #bc101a;
+	font-size: 120%;	
+	float: right;
+	margin-right: 45px;
+	margin-top: 15px;
+}	
+
+
+.singular-page-1070 .bouton-contact .fa {
+	color: #bc101a;
+	padding: 0 10px;
+}
+
+.singular-page-1070 .bouton-contact .fa-phone::before {
+  font-size: 120%;
+}
+
+/***************************************
+* sidebar subsidiary
+***************************************/
+
+	
+.singular-page-1070 #sidebar-subsidiary .widget {
+	background-color: #bc101a;
+	opacity: 0.7;
+	filter: alpha(opacity=70);  /*for IE7*/
+	color: white;
+	border-radius: 5px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;	
+}
+
+.singular-page-1070 h3.widget-title {
+	background: white url('../images/utility-bg.png');
+	border-radius: 5px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-top: 1px solid #bc101a;
+	border-left: 1px solid #bc101a;
+	border-right: 1px solid #bc101a;
+}
+
+.singular-page-1070 .textwidget h3,
+.singular-page-1070 .textwidget a,
+.singular-page-1070 .textwidget p {
+	color: white;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+}
+
+.singular-page-1070 #menu-subsidiary li {
+	border: 1px solid #bc101a;
+	margin-right: 2px;
+	border-radius: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.singular-page-1070 #menu-subsidiary {
+  border: none;
+}
+
+/***************************************
+* other
+***************************************/
+
+.singular-page-1070 #main {
+	background: whitesmoke;
+	padding: 0px 0px;
+	margin-top: -75px;
+	margin-bottom: 0px;
+}
+
+
+.parent-id-892 .breadcrumb-trail {
+	display: none;	
+}
+
+
+/***************************************
+* separators 
+* http://tympanus.net/codrops/2013/10/03/a-collection-of-separator-styles/
+**************************************/
+
+.singular-page-1070 *,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* General styles and layout */
+
+.singular-page-1070 .container {
+	overflow: hidden;
+	/* we don't want the pseudo-elements sticking out */
+}
+
+.singular-page-1070 .container svg {
+	display: block;
+}
+
+.singular-page-1070 section {
+	position: relative;
+}
+
+.singular-page-1070 .text:first-child {
+	text-align: right;
+}
+
+.singular-page-1070 .text:nth-child(2) {
+	text-align: left;
+}
+
+.singular-page-1070 .col-2 .column {
+	width: 49%;
+}
+
+.singular-page-1070 .col-3 .column {
+	padding: 0 1%;
+	width: 33%;
+	text-align: center;
+}
+
+.singular-page-1070 .col-3 .column p {
+	padding: 1.4em;
+}
+
+.singular-page-1070 .column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.singular-page-1070 .column .fa {
+	display: block;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.1);
+	color: #fff;
+	text-align: center;
+	font-size: 8em;
+	line-height: 2em;
+	margin: 0 auto;
+}
+
+.singular-page-1070 .icon {
+	display: block;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.1);
+	color: #fff;
+	text-align: center;
+	font-size: 8em;
+	line-height: 2em;
+	margin: 0 auto;
+}
+
+
+/*** Individual section styles and separators ***/
+
+/* Common style for pseudo-elements */
+.singular-page-1070 section::before,
+.singular-page-1070 section::after,
+#header::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+/* MY own broken line !!! */
+.singular-page-1070 svg#BrokenLineBefore {
+	pointer-events: none;
+	background: #eee url('../images/utility-bg.png');
+	margin-bottom: -7px;
+}
+
+.singular-page-1070 #BrokenLineBefore path {
+	fill: whitesmoke;
+	stroke: whitesmoke;
+	stroke-width: 1;
+}
+
+.singular-page-1070 svg#BrokenLineAfter {
+	pointer-events: none;
+	background-color: #2980b9; /* color of this section */
+	margin-bottom: -37px;
+}
+
+.singular-page-1070 #BrokenLineAfter path {
+	fill: whitesmoke; /* color of section just AFTER this one */
+	stroke: whitesmoke;
+	stroke-width: 2;
+}
+
+.singular-page-1070 svg#BrokenLineHeader {
+	pointer-events: none;
+	background-color: #2980b9; /* color of this section */
+	margin-bottom: -37px;
+}
+
+.singular-page-1070 #BrokenLineHeader path {
+	fill: red; /* color of section just AFTER this one */
+	stroke: whitesmoke;
+	stroke-width: 2;
+}
+
+
+.color {
+	background: #eee url('../images/utility-bg.png');
+	padding: 10px 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.ald-broken-line {
+	background-color: #2980b9;
+	padding: 10px 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-top: -50px;
+}
+
+.singular-page-1070 #titre {
+	background-color: whitesmoke;
+	min-height: 150px;
+	padding: 120px 5px 70px 5px;
+	text-align: center;
+}
+
+.singular-page-1070 .col-2 {
+	background-color: #2980b9;
+	background-image: url(http://www.transparenttextures.com/patterns/black-linen.png);
+}
+
+.section.color {
+	background-color: whitesmoke;
+	padding: 45px 5px 5px 1px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/* Multiple Triangles */
+.singular-page-1070 .ss-style-multitriangles::before,
+.singular-page-1070 .ss-style-multitriangles::after {
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.singular-page-1070 .ss-style-multitriangles::before {
+	top: -25px;
+	background: inherit;
+	box-shadow: -50px 50px 0 #bc101a, 50px -50px 0 #bc101a;
+}
+
+.singular-page-1070 .ss-style-multitriangles::after {
+	bottom: -25px;
+	z-index: 10;
+	background: inherit;
+	box-shadow: -50px 50px 0 rgba(188,16,26,0.6), 50px -50px 0 rgba(188,16,26,0.8);
+}
+
+/* Slit */
+.singular-page-1070 .ss-style-slit {
+	padding-top: 5em;
+}
+
+.singular-page-1070 .ss-style-slit::before, 
+.singular-page-1070 .ss-style-slit::after {
+	width: 50.5%;
+	width: -webkit-calc(50% + 10px);
+	width: -moz-calc(50% + 10px);
+	width: calc(50% + 10px);
+	height: 160px;
+	background: #2980b9;
+	top: -160px;
+}
+
+.singular-page-1070 .ss-style-slit::before {
+	left: -20px;
+	-webkit-transform: skewX(10deg);
+	transform: skewX(10deg);
+	box-shadow: -10px -20px #3192d3;
+}
+
+.singular-page-1070 .ss-style-slit::after {
+	right: -20px;
+	-webkit-transform: skewX(-10deg);
+	transform: skewX(-10deg);
+	box-shadow: 10px -20px #3192d3;
+}
+
+/* Alternative slit with inner shadow */
+.singular-page-1070 #slitPath1 {
+	fill: rgba(188,16,26,1);    /* #bc101a */
+	stroke: transparent;
+	stroke-width: 0;
+}
+
+.singular-page-1070 #slitPath2, 
+.singular-page-1070 #slitPath3 {
+	fill: rgba(188,16,26,0.6);    /* #bc101a */
+}
+
+.singular-page-1070 #slit {
+	background-color: whitesmoke;
+	background: #eee url('../images/utility-bg.png');
+	/* margin-top: -5px; */
+	margin-bottom: -7px; 
+	padding-bottom: 10px;
+}
+
+.singular-page-1070 #slit-2 {
+	background-color: whitesmoke;
+	/* background: #eee url('../images/utility-bg.png'); */
+	/* margin-top: -5px; */
+	margin-bottom: -7px; 
+	padding-bottom: 10px;
+}
+
+/* Folded corner */
+.singular-page-1070 .ss-style-foldedcorner::before,
+.singular-page-1070 .ss-style-foldedcorner::after {
+	bottom: 0;
+	width: 100px;
+	height: 100px;
+}
+
+.singular-page-1070 .ss-style-foldedcorner::before {
+	right: 0;
+	background-image: -webkit-linear-gradient(top left, #37a2ea 50%, #3498db 50%);
+	background-image: linear-gradient(315deg, #3498db 50%, #37a2ea 50%);
+}
+
+.singular-page-1070 .ss-style-foldedcorner::after {
+	right: 100px;
+	background-image: -webkit-linear-gradient(top left, transparent 50%, #236fa1 50%);
+	background-image: linear-gradient(315deg, #236fa1 50%, transparent 50%);
+}
+
+/* Media Queries for the layout */
+
+@media screen and (max-width: 54em) {
+	.singular-page-1070 .column {
+		display: block;
+		width: 100% !important;
+	}
+
+	.singular-page-1070 .text:first-child,
+	.singular-page-1070 .text:nth-child(2) {
+		text-align: center;
+	}
+
+	.singular-page-1070 .icon {
+		margin: 0 auto;
+	}
+
+	.singular-page-1070 .col-2 .column:first-child .icon {
+		margin: 0 auto 50px;
+	}
+
+	.singular-page-1070 .col-2 .column:nth-child(2) .icon {
+		margin: 50px auto 0;
+	}
+}
+
+/* styles pour les sections AC */
+.singular-page-1070 #partenaire-nolte .bloc {
+	max-width: 50%;
+	border: none;
+}
+
+.singular-page-1070 #partenaire-nolte {
+	padding: 120px 10px 30px 10px;
+	border-bottom: 1px dotted #bc101a;
+}
+
+.singular-page-1070 .flexslider, .carousel {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 19px 20px 60px 20px;
+	margin-top: -10px;
+	margin-bottom: 0;
+	border: none;
+}
+
+.singular-page-1070 .flexslider .slide-caption {
+	right: 0%;
+}
+
+.singular-page-1070 #page-slider {
+	padding-top: 30px;
+	background: #eee url('../images/utility-bg.png');
+	border-bottom: 1px dotted #bc101a;
+}
+
+.singular-page-1070 .flex-control-nav {
+	width: 95%;
+	bottom: -10px;
+	background: #eee url('../images/utility-bg.png');
+	margin-bottom: 30px;
+  /* margin-top: 15px; */
+}
+
+.singular-page-1070 #testimonials {
+	padding-top: 30px;
+	background: whitesmoke;
+}
+
+.singular-page-1070 #accompagnement {
+	padding: 20px;
+	background: #eee url('../images/utility-bg.png');
+}
+
+.singular-page-1070 #partenaires {
+	padding: 20px;
+	background: whitesmoke;
+}
+
+
+.singular-page-1070 .home-testimonial-boxes{
+	margin-bottom: 0 ;
+}

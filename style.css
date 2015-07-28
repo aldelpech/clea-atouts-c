@@ -1,0 +1,639 @@
+/**
+ * Theme Name:  Atouts Cuisines (child of Clea Base)
+ * Theme URI:   
+ * Description: Un thème pour un site "impact"
+ * Version:     1.0.0
+ * Author:      Anne-Laure Delpech
+ * Author URI:  http://parcours-performance.com
+ * Tags:        
+ * Text Domain: atouts-cuisines
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    clea-base
+ */
+ 
+
+/*****************************************************
+*
+* container (page) size
+*
+******************************************************/
+
+
+@media only screen and (min-width: 760px) {
+	
+	.testimonial-single #container,
+	#container {
+		max-width: 800px;
+	}
+
+	.testimonial-group #container,
+	.home #container	{
+		max-width: 1000px;
+		padding: 3px 0 0;
+	}	
+	
+}
+
+h1 {
+	line-height: 1.2;
+}
+ 
+/*****************************************************
+*
+* Header
+*
+******************************************************/
+.ald-unique-logo a img {
+  float: left;
+}
+
+#site-description {
+  margin-left: 10px;
+  float: left;
+}
+
+@media only screen and (min-width: 760px) {
+
+	#menu-secondary {
+		background: #bc101a !important ;
+		border: 1px solid #bc101a; 
+	}
+
+	#menu-secondary >.wrap {
+	  width: 95% ;
+	}
+
+	#menu-secondary li a:hover, 
+	#menu-secondary li:hover >a, 
+	#menu-secondary li.current-menu-item >a {
+		background: #bc101a !important ;
+	}
+	
+	#menu-secondary li a {
+		padding: 12px 15px;
+		border-right: 1px solid #bc101a;
+	}
+		
+	#header {
+	   min-height: 165px;  
+	}
+
+	#sidebar-header {
+		margin-top: 10px;
+	}
+	
+	.topbar {
+		margin-bottom: 0;
+	}
+
+	#menu-primary {
+		margin: 1px auto 0px ;
+	}
+}
+
+.top-search {
+  display: none;
+}
+
+.bouton-contact {
+	background-color: whitesmoke ;
+	padding: 20px 10px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	text-decoration: none;
+	color: #bc101a;
+	font-size: 120%;	
+	float: right;
+	margin-right: 45px;
+}	
+
+
+.bouton-contact .fa {
+	color: #bc101a;
+	padding: 0 10px;
+}
+
+.bouton-contact .fa-phone::before {
+  font-size: 120%;
+}
+
+
+/********************************************************** 
+réglage couleurs
+***********************************************************/
+#menu-primary li li:hover,
+#menu-primary li li:hover > a,
+#menu-primary li a:hover, 
+#menu-primary li:hover > a, 
+#menu-primary li.current-menu-item > a,
+#menu-secondary-has-children li a {
+	background-color: #cddc39;
+	text-decoration: none;
+	
+}
+
+/* for the color of a parent menu when submenu is displayed */
+#menu-secondary ul ul {
+	background-color: #bc101a !important ;
+}
+
+
+#menu-secondary li a:active,
+#menu-secondary li.current-menu-item >a, 
+#menu-secondary li a:hover {
+	background-color: #bc101a !important ; 			/* primary color */
+	color : #f0eb2c ; 								/* secondary color */
+}
+
+#menu-subsidiary {
+	background: transparent;
+	border: none;
+}
+
+#menu-subsidiary ul {
+  float: right;
+}
+
+#menu-subsidiary li {
+	border: #bc101a 1px solid;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-left: 3px;
+}
+
+#menu-subsidiary li a {
+	color: #555;
+	background: transparent;
+	border-right: none;
+}
+
+#menu-subsidiary li a:hover, 
+#menu-subsidiary li.current-menu-item a {
+	background-color: #bc101a;
+	color: #f0eb2c ;
+}
+
+#footer {
+	border: solid 1px #bc101a;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: transparent !important;
+	margin-bottom: 5px;
+}
+
+#footer .footer-content, 
+#footer .copyright a,
+#footer .credit a {
+  color: #555 !important;
+}
+
+/**********************************************************
+* détails
+**********************************************************/
+
+/* bullets replaced with a font awesome icon */
+#content ul, 
+#content ol {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#content li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px
+}
+
+#content li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  content: "\f138";  /* \f046  */
+  color: #bc101a;
+}
+
+/* same for nested lists */
+
+#content li li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px
+}
+
+#content li li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  content: "\f046";  /* \f138  */
+  color: #bc101a;
+}
+
+#content li li:first-child {	/*first li */
+  margin-top: 10px;
+}
+
+/**********************************************************
+* Page d'accueil
+**********************************************************/
+
+.home .breadcrumb-trail {
+	display: none;
+	
+}
+
+/* section partenaire-nolte */
+#partenaire-nolte {
+	padding: 20px 0px;
+}
+
+#partenaire-nolte .bloc-left,
+#partenaire-nolte .bloc-right {
+  margin:0 10px; /* espacement horizontal des blocs */
+  /* border:1px solid #fff; */
+  display:inline-block;
+  vertical-align:middle;
+}
+
+#partenaire-nolte .bloc-left {
+	max-width: 73%;
+	text-align:left; /* on rétablit l'alignement du texte */
+}
+
+#partenaire-nolte .bloc-right {
+	max-width: 20%;
+}
+
+.bloc-left h3 {
+	font-weight: 600;
+	font-style: italic;
+	line-height: 1.2;
+}
+
+.bloc-right img {
+	/* max-width: 150px; */
+}
+
+div.bloc { 
+  display:inline; /* correctif inline-block pour IE7 */
+}
+	
+/* SLIDER 
+/***************************/
+	#page-slider h3 {
+		padding: 20px 0px;
+	}
+/*	.flexslider {
+		margin-bottom: 75px;
+	}
+*/	
+	.flexslider .slides {
+		overflow:   hidden;
+		max-height: 400px;
+	}
+
+	.flexslider .slide {
+		overflow: hidden;
+		position: relative;
+		width:    100%;
+		height:   100%;
+	}
+
+	.flexslider img {
+		position:  relative;
+		z-index:   97;
+		max-width: 100%;
+		max-height: 400px;
+		padding:   0;
+		border:    none;
+	}
+
+.flexslider .slide-caption {
+  width: 30%;
+  min-width: 175px;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 98;
+  opacity: 0.85;
+  background: whitesmoke;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flexslider .slide-caption img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	float: right;
+}
+
+.flexslider .slide-caption .bouton-caption {
+	margin-top: 15px;
+}
+
+ .flexslider .slide-caption .bouton-savoir {
+	border: 1px #bc101a solid;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.bouton-savoir .fa {
+	padding: 0 10px;
+}
+
+.flexslider .slide-caption a {
+   text-decoration: none;
+}
+
+.flexslider .slide-caption h2,
+.flexslider .slide-caption p {
+     color: black;
+}
+
+.flex-control-paging li a.flex-active {
+  background: #bc101a;
+  background: rgba(188, 16, 26, 0.9);
+  cursor: default;
+}
+
+/* autres éléments sur page d'accueil */
+
+	.home .content-secondary .hentry {
+		margin-bottom: 50px;
+	}
+
+	.home .content-secondary .entry-title {
+		font-size: 1.125rem;
+		margin:    0;
+	}
+
+	.home .content-secondary .entry-byline {
+		font-size: 0.75rem;
+		margin:    0;
+	}
+
+	.home .content-secondary .entry-summary p {
+		font-size: 0.8125rem;
+	}
+
+	/* for the homepage video */
+	.embed-wrap iframe {
+		height: 340px;
+	}
+
+	.embed-wrap {
+		margin-left: auto;
+		margin-right: auto;
+		/* max-width: 600px; */
+	}
+	
+	/* http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469 */
+	.wptuts-video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 90%;
+	}
+	 
+	.wptuts-video-container iframe {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}	
+	
+/* gallery
+****************************************/
+	.gallery-row {
+	  padding-bottom: 20px;
+	}
+
+	.gallery img {
+	  padding: 3px !important;
+	  background: none !important;
+	  border: 1px solid #bc101a !important;
+	}
+
+	/* pour le texte sous une photo cliquée */
+	#TB_caption {
+		height: 45px !important;	
+	}
+
+/******************************
+* Shortcode ultimate style 
+******************************/
+	.su-tabs-nav, 
+	.su-tabs {
+	  background: #ffffff !important;
+	}
+
+	.su-tabs-nav span.su-tabs-current {
+	  background: #bc101a !important;
+	  color: #ffffff !important;
+	}
+
+	.su-tabs-nav span {
+		border-left: 2px solid #bc101a !important;
+		border-right: 2px solid #bc101a !important;	
+		border-top: 2px solid #bc101a !important;		
+	}
+
+	.su-tabs-panes {
+		border: 2px solid #bc101a !important;
+	}
+
+	.su-tabs-pane p {
+		font-size: 120% !important;
+	}
+
+	.su-spoiler-style-fancy > .su-spoiler-title {
+	  color: #bc101a !important;
+	}
+
+	.su-slider-slide > a > img {
+	  background-image: none;
+	  background-color: white;
+	  border: 2px #bc101a solid;
+	}
+
+ 	.su-note.portraits {
+		border: none; 	
+	}
+
+	.su-note.portraits .su-note-inner {
+		border: none; 
+		display: inline-block;
+		background-color: transparent !important ;
+	}
+
+	.su-note.portraits .su-note-inner img {
+		float: left;
+		margin-right: 15px;
+		margin-bottom: 5px;	
+	}
+	
+	.su-note.portraits .su-note-inner  ol {
+		text-indent: -1em;
+		list-style-position: inside;
+	}
+
+.su-box.points-forts img {
+	padding: 3px !important;
+	background: none !important;
+	border: 1px solid #bc101a !important;
+}
+
+.su-box.points-forts .su-box-content {
+    background-color: transparent;
+}
+
+.su-box.points-forts .wp-caption-text {
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 0.8125rem;
+    color: #999;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    line-height: 1.1;
+}
+
+.su-box.points-forts {
+	border-color: #bc101a !important;
+}
+
+.su-box.points-forts .su-box-title {
+background-color: transparent !important;
+    border-color: #bc101a;
+    color: #bc101a !important;
+}
+
+
+
+
+/* widget bas de page */
+@media only screen and (min-width: 760px) {
+	#sidebar-subsidiary {
+		background-image: url('images/schema.png');
+		background-color: transparent;
+		background-size: 280px 210px;
+		background-repeat: repeat;
+		background-position: bottom right;
+		background-attachment: scroll;
+		border-radius: 5px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		padding: 10px;
+	}
+}
+
+#sidebar-subsidiary .widget {
+	background-color: #bc101a;
+	opacity: 0.9;
+	filter: alpha(opacity=70);  /*for IE7*/
+	border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;	
+}
+
+h3.widget-title {
+	background: white url('images/utility-bg.png');
+	border-radius: 5px 5px 0 0; 
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-top: 1px solid #bc101a;
+	border-left: 1px solid #bc101a;
+	border-right: 1px solid #bc101a;
+	font-weight: 600;
+}
+
+.textwidget h3,
+.textwidget a,
+.textwidget p {
+	color: #f0eb2c;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+}
+
+.textwidget h3 {
+	font-weight: 600;
+}
+
+/* essai tooltips */
+/* http://www.webdesignerdepot.com/2012/11/how-to-create-a-simple-css3-tooltip/ */
+.tooltip{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.tooltip2{
+    display: inline;
+    position: relative;
+}
+
+.tooltip2:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(data-tip);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+
+.tooltip2:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
