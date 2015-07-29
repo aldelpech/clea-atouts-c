@@ -5,6 +5,10 @@
 		voir ligne 16 -->
 
 	<?php
+	
+	// rechercher le lien vers les témoignages 
+	$read = ac_read_full_link() ; 
+	
 	// will get 7 if link is http://0ac2015.atoutscuisines.com/test-affichage-temoignages/?testimonial_id=7
 	$id = $_GET['testimonial_id'];
 	// echo "<p>id du témoignage : " . $id . "</p>";
@@ -36,8 +40,9 @@
 		?>
 
 		</br>
-			<a href="../nos-realisations/">Tous les témoignages</a>  |  
-			<a href="../nos-realisations//?group_id=<?php echo $groupe ;?>"> Les témoignages du même groupe de prix</a>
+		
+			<a href="<?php echo $read[ 'link' ] ; ?>">Tous les témoignages</a>  |  
+			<a href="<?php echo $read[ 'link' ] ; ?>?group_id=<?php echo $groupe ;?>"> Les témoignages du même groupe de prix</a>
 		</section>
 	</section>
 

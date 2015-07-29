@@ -34,12 +34,14 @@
 			} ?>
 
 	
-		<input type="radio" name="groupAC" id="G<?php echo $key; ?>" value="<?php echo $input_value; ?>" onclick='functionCalled( <?php echo $key; ?>  )' <?php echo $checked; ?> >	
+		<input type="radio" name="groupAC" id="G<?php echo $key; ?>" value="<?php echo $input_value; ?>" onclick='functionCalled( <?php echo $key; ?> )' <?php echo $checked; ?> >	
 		<label for="G<?php echo $key; ?>"><?php echo $value ?></label>
 		<script>
-			 function functionCalled( t) {
-				  var link = "http://0ac2015.atoutscuisines.com/nos-realisations/?group_id=" + t;
-				  // alert( link );
+			 function functionCalled( t ) {
+				  var val = "<?php echo $read[ 'link' ] ; ?>";  // the testimonial page link
+				  val = val + "?group_id=";  
+				  var link = val + t;
+				  // alert( link ); // pour afficher le résultat (deboguage)
 				  window.location = link; //if you want to redirect
 			 }
 		</script>
