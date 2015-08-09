@@ -121,15 +121,20 @@
 body.singular-page-921  {
 	border: none;
     background-color: rgba(230,230,250,0.5) !important;
-    background-image: url('../images/graphy.png') !important;
+    /* background-image: url('../images/graphy.png') !important; */
+    background: rgba(248,248,255,0.6) url('../images/brushed-alum-dark.png') !important;
 }
 
 .singular-page-921 .ald-unique-logo a img {
-	padding: 15px 10px 0 0 ;
+	padding: 15px 10px;
+	/* padding: 15px 10px 0 0 ; */
     background: ghostwhite ;
-	border-radius: 0 40px 0 0 ;
+	border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+	/* border-radius: 0 40px 0 0 ;
 	-webkit-border-radius: 0 40px 0 0 ;
-	-moz-border-radius: 0 40px 0 0 ;
+	-moz-border-radius: 0 40px 0 0 ; */
 }
 
 .singular-page-921 .autre-ald-unique-logo a img {

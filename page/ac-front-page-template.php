@@ -118,15 +118,14 @@ get_header(); // Loads the header.php template. ?>
 
 <hr> 	
 <section id="accompagnement">	
-<h2>essai</h2>
+<h2>Nous vous accompagnons de A à Z !</h2>
 	<?php
 	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your_YouTube_url = 'V-ymSFhhOP4'; // AC v0
+	$your_YouTube_url = 'odw7qXyzMmg' // V1 --- 'V-ymSFhhOP4'; AC v0
 	?>
 	<div class="wptuts-video-container">
 		<iframe src="//www.youtube.com/embed/<?php echo $your_YouTube_url; ?>" height="480" width="853" allowfullscreen="" frameborder="0"></iframe>
 	</div>
-
 </section><!-- accompagnement -->
 <hr> 	
 <section id="partenaires">	

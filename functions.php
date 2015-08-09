@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'clea_atout_c_enqueue_styles', 4 );
 add_filter('body_class','dbdb_body_classes');
 
 /* Register and load scripts for tests homepages. */
-add_action( 'wp_enqueue_scripts', 'clea_atout_c_tests_script' );
+/* add_action( 'wp_enqueue_scripts', 'clea_atout_c_tests_script' ); */
 
 /* Register and load styles for tests homepages. */
 add_action( 'wp_enqueue_scripts', 'clea_atout_c_tests_style', 4 );
@@ -77,23 +77,26 @@ function clea_atout_c_enqueue_styles() {
 function clea_atout_c_enqueue_scripts() {
 
 	/* Enqueue the 'flexslider' script. */
-	if ( is_page_template( 'page/ac-front-page-template.php' ) )
+	if ( is_page_template( 'page/ac-front-page-template.php' ) ) {
 		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.min.js' , array( 'jquery' ), '20120713', true );
+	}
 }
 
 function clea_atout_c_tests_style() {
 	global $post ;
-	if ( $post->post_parent == '892' ) {
+	if ( is_page_template( 'page/ac-front-page-template.php' ) ) {
 		wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css' , array( '25px' ) );
 	}
 }
 
+/*
 function clea_atout_c_tests_script() {
 	global $post ;
 	if ( $post->post_parent == '892' ) {
 		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/flexslider/flexslider.min.js' , array( 'jquery' ), '20120713', true );
 	}
 }
+*/
 
 /**
  * Custom class for the WP 'body_class()' function
@@ -102,16 +105,17 @@ function clea_atout_c_tests_script() {
 function dbdb_body_classes($classes) {
     // source http://darrinb.com/notes/2010/customizing-the-wordpress-body_class-function/
 	
+	global $post;
 	global $wp_query;
     
     // if there is no parent ID and it's not a single post page, category page, or 404 page, give it
     // a class of "parent-page"
-    if( $wp_query->post->post_parent < 1  && !is_single() && !is_archive() && !is_404() ) {
+    if( $post->post_parent < 1  && !is_single() && !is_archive() && !is_404() ) {
         $classes[] = 'parent-page';
     };
     
     // if the page/post has a parent, it's a child, give it a class of its parent name
-    if($wp_query->post->post_parent > 0 ) {
+    if( $post->post_parent > 0 ) {
         /* $parent_title = get_the_title($wp_query->post->post_parent);
         $parent_title = preg_replace('#\s#','-', $parent_title);
         $parent_title = strtolower($parent_title);

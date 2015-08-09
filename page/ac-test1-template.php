@@ -123,10 +123,10 @@ get_header( 'test1' ); // Loads the header.php template. ?>
 		<path id="b" d="M0 105 L0 0 L66.5 50 L100 0 L100 105 Z"></path>
 	</svg>
 <section id="accompagnement" class="clair">	
-<h2>essai 2 (wp tuts plus) </h2>
+<h2>Nous vous accompagnons de A à Z !</h2>
 	<?php
 	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your_YouTube_url = 'V-ymSFhhOP4'; // AC v0
+	$your_YouTube_url = 'odw7qXyzMmg' // V1 --- 'V-ymSFhhOP4'; AC v0
 	?>
 	<div class="wptuts-video-container">
 		<iframe src="//www.youtube.com/embed/<?php echo $your_YouTube_url; ?>" height="480" width="853" allowfullscreen="" frameborder="0"></iframe>
