@@ -45,8 +45,30 @@ if (isset( $_GET[ 'testimonial_id'] ) ) {
 
 	<div id="container">
 		
-		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
-		<?php clea_base_add_html_to_header() ; // loads social media and search form from ald-custom-header.php ?>
+		<?php get_template_part( 'menu', 'test1' ); // Loads the menu-primary.php template. ?>
+
+		<!-- pour voir les options
+		-- http://0ac2015.atoutscuisines.com/wp-admin/options.php
+		'theme_mods_clea-atouts-c'
+		'theme_mods_clea-base'
+		'theme_mods_unique'
+		'theme_mods_unique-impact1'
+		'unique_theme_settings'
+		'clea-base_theme_settings'
+		
+		-->
+
+		<?php
+		$value = get_option( 'clea-base_theme_settings' );
+		// var_dump( $value ); 
+		?>
+
+		<div class="ald-unique-logo">		
+			<a href="<?php echo get_home_url() ; ?>" >
+			<img class="logo-ac" src="<?php echo $value[ "logo_upload" ]; ?>" alt="logo" width="<?php echo $value[ "logo_width" ]; ?>" height="<?php echo $value[ "logo_height" ]; ?>"/>
+			</a>
+		</div>	
+
 		<header id="header">
 
 			<div id="sidebar-header" class="sidebar">
@@ -54,18 +76,12 @@ if (isset( $_GET[ 'testimonial_id'] ) ) {
 			</div><!-- #sidebar-header -->
 			
 			<hgroup id="branding">
-				<?php do_atomic( 'open_header' ); // crée un "hook" "repertoire_open_header ?>
-				<?php hybrid_site_title(); ?>
+				<?php // do_atomic( 'open_header' ); // crée un "hook" "repertoire_open_header ?>
+				<?php // hybrid_site_title(); ?>
 				<?php // hybrid_site_description(); ?>
 			</hgroup><!-- #branding -->
 
-		</header><!-- #header -->
-		
-		<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-primary.php template. ?>
-	
-		
-		<?php if ( get_header_image() ) echo '<img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" />'; ?>
-		
+		</header><!-- #header -->		
 		<div id="main">
 
 			<?php get_template_part( 'breadcrumbs' ); // Loads the breadcrumbs.php template. ?>

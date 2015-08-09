@@ -14,9 +14,7 @@
  
 
 /*****************************************************
-*
 * container (page) size
-*
 ******************************************************/
 
 
@@ -33,16 +31,29 @@
 		padding: 3px 0 0;
 	}	
 	
+	.breadcrumb-trail {
+		margin: 50px 0 50px;
+	}
+	
 }
 
 h1 {
 	line-height: 1.2;
 }
+
+body  {
+	border: none;
+    background-color: rgba(230,230,250,0.5) !important;
+    background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png') !important;
+}
+
+#main {
+	margin-top: -75px;
+    margin-bottom: 40px;
+}
  
 /*****************************************************
-*
 * Header
-*
 ******************************************************/
 .ald-unique-logo a img {
   float: left;
@@ -56,27 +67,54 @@ h1 {
 @media only screen and (min-width: 760px) {
 
 	#menu-secondary {
-		background: #bc101a !important ;
-		border: 1px solid #bc101a; 
+		margin: 0 5px 0 0;
+		background: none !important;
+		border: none;
+		position: relative;
+		z-index: 125;
 	}
 
 	#menu-secondary >.wrap {
-	  width: 95% ;
+	  width: 100% ;
 	}
 
-	#menu-secondary li a:hover, 
-	#menu-secondary li:hover >a, 
-	#menu-secondary li.current-menu-item >a {
-		background: #bc101a !important ;
-	}
+	#menu-secondary .menu-items {
+		float: right;
+		background-color: #bc101a;
+		border-radius: 5px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		margin-bottom: 5px;
+	}	
 	
 	#menu-secondary li a {
 		padding: 12px 15px;
-		border-right: 1px solid #bc101a;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
 	}
 		
 	#header {
-	   min-height: 165px;  
+		margin-top: -45px;
+		min-height: 200px;  /* important to display the clipped path */
+		background-image: url('images/NK3752-Lavender.png');
+		/*
+		* !!!!
+		* see http://cssplant.com/clip-path-generator
+		* to to generate code for firefox and iOS
+		*/
+		/*Chrome,Safari*/
+		-webkit-clip-path: polygon(0px 149px,705px 190px,1060px 132px,1060px 0px,0px 0px);
+
+		/*Firefox*/
+		clip-path: url("#clipPolygon");
+
+		/* iOS support inline encoded svg file*/
+		-webkit-mask: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIwIiBoZWlnaHQ9IjAiPgogIDxjbGlwUGF0aCBpZD0ic3ZnQ2xpcCI+CiAgICA8cGF0aCBpZD0ic3ZnUGF0aCIgZD0iTTAsMTQ5IEw3MDUsMTkwIDEwNjAsMTMyIDEwNjAsMCAwLDAgeiIvPgogIDwvY2xpcFBhdGg+CiAgPHBhdGggaWQ9InN2Z01hc2siIGQ9Ik0wLDE0OSBMNzA1LDE5MCAxMDYwLDEzMiAxMDYwLDAgMCwwIHoiICAvPgo8L3N2Zz4=) no-repeat;
+		background-size: cover;
+		background-repeat: none;
+		background-position: top right;
+		padding: 10px;  
 	}
 
 	#sidebar-header {
@@ -92,21 +130,71 @@ h1 {
 	}
 }
 
+hgroup#branding {
+	display: none ;
+}	
+
+#sidebar-header {
+		margin-right: 0; 
+}
+
 .top-search {
   display: none;
 }
 
+.ald-unique-logo {
+	position: relative;
+	z-index: 10000;  /* must be on top of header */
+	top: 18px;
+	left: 0px;
+}	
+
+.ald-unique-logo a img {
+	padding: 15px 10px;
+    background: ghostwhite ;
+	border-radius: 0 15px 15px 0;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+	box-shadow: 2px 2px 2px #858585;
+}
+
+.ald-unique-logo a img:hover {
+	box-shadow: none;
+	border: 1px solid #858585 ;
+}
+
+.autre-ald-unique-logo {
+	  position: relative;
+	  z-index: 10000;  /* must be on top of header */
+	  top: -37px;
+	  left: 12px;
+}
+
+.autre-ald-unique-logo a img {
+	float:left ;
+	margin-bottom: 0px;
+	padding: 0px;
+	background: whitesmoke;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+} 
+
+
 .bouton-contact {
-	background-color: whitesmoke ;
-	padding: 20px 10px;
-	border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	text-decoration: none;
-	color: #bc101a;
-	font-size: 120%;	
-	float: right;
-	margin-right: 45px;
+    background-color: ghostwhite;
+    padding: 10px 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    text-decoration: none;
+    color: #bc101a;
+    font-size: 120%;
+    /* float: right; */
+	position: relative;
+    /* z-index: 10000; */
+    top: 18px;
+	right: -120px;
 }	
 
 
@@ -139,9 +227,13 @@ réglage couleurs
 	background-color: #bc101a !important ;
 }
 
+#menu-secondary li a {
+	border-right: 1px solid #bc101a;
+}
 
 #menu-secondary li a:active,
 #menu-secondary li.current-menu-item >a, 
+#menu-secondary li:hover >a,
 #menu-secondary li a:hover {
 	background-color: #bc101a !important ; 			/* primary color */
 	color : #f0eb2c ; 								/* secondary color */
@@ -189,6 +281,10 @@ réglage couleurs
 #footer .copyright a,
 #footer .credit a {
   color: #555 !important;
+}
+
+#main {
+	background: ghostwhite;
 }
 
 /**********************************************************
@@ -527,113 +623,93 @@ background-color: transparent !important;
 
 
 
-/* widget bas de page */
+/***************************************
+* sidebar subsidiary
+***************************************/
+
 @media only screen and (min-width: 760px) {
+
 	#sidebar-subsidiary {
-		background-image: url('images/schema.png');
-		background-color: transparent;
-		background-size: 280px 210px;
-		background-repeat: repeat;
-		background-position: bottom right;
-		background-attachment: scroll;
-		border-radius: 5px;
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		padding: 10px;
+		padding: 0px 0 20px 0px;
+		margin-top: -45px;
+		display: inline-block;
+		border-radius: 0 0 10px 10px;
+		-webkit-border-radius: 0 0 10px 10px;
+		-moz-border-radius: 0 0 10px 10px;
+		width: 99.9%;
+		border-style : solid;
+		border-width : 0 1px 1px 1px ;
+		border-color : #ddd;
 	}
+
+	#sidebar-subsidiary .widget {
+		width: 30% !important;
+		margin: 0 1.8% 0 0 !important;
+	}	
+
+	#sidebar-subsidiary .widget:first-child{
+		width: 35.7% !important;
+	}
+
+	#sidebar-subsidiary .widget:last-child {
+		margin: 0 !important;
+	}
+	
+}
+
+
+#sidebar-subsidiary {
+	background: ghostwhite;
+	position: relative;
+	border: none ;
 }
 
 #sidebar-subsidiary .widget {
-	background-color: #bc101a;
-	opacity: 0.9;
-	filter: alpha(opacity=70);  /*for IE7*/
-	border-radius: 5px; 
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;	
+	background: rgba(248,248,255,0.6) url('images/wood-021.png');
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	height: 240px;
+    border: 1px solid #bc101a;
 }
 
 h3.widget-title {
-	background: white url('images/utility-bg.png');
-	border-radius: 5px 5px 0 0; 
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
-	border-top: 1px solid #bc101a;
-	border-left: 1px solid #bc101a;
-	border-right: 1px solid #bc101a;
+	background: none; 
+	border-radius: 10px 10px 0 0 ; 
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	margin: 0px ;
+	color: #bc101a;
 	font-weight: 600;
+	font-size: 1.55em;
+}
+
+.textwidget {
+	border-radius: 0 0 10px 10px ; 
+	-webkit-border-radius: 0 0 10px 10px ;
+	-moz-border-radius: 0 0 10px 10px;
+	padding-top: 10px;
 }
 
 .textwidget h3,
 .textwidget a,
 .textwidget p {
-	color: #f0eb2c;
+	color: #bc101a;
 	margin-left: 8px;
 	margin-right: 8px;
 	margin-bottom: 10px;
 }
 
-.textwidget h3 {
-	font-weight: 600;
+#menu-subsidiary li {
+	border: 1px solid #bc101a;
+	margin-right: 2px;
+	border-radius: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
-/* essai tooltips */
-/* http://www.webdesignerdepot.com/2012/11/how-to-create-a-simple-css3-tooltip/ */
-.tooltip{
-    display: inline;
-    position: relative;
+#menu-subsidiary {
+  border: none;
 }
 
-.tooltip:hover:after{
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: 26px;
-    color: #fff;
-    content: attr(title);
-    left: 20%;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 98;
-    width: 220px;
-}
 
-.tooltip:hover:before{
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 6px 0 6px;
-    bottom: 20px;
-    content: "";
-    left: 50%;
-    position: absolute;
-    z-index: 99;
-}
-
-.tooltip2{
-    display: inline;
-    position: relative;
-}
-
-.tooltip2:hover:after{
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: 26px;
-    color: #fff;
-    content: attr(data-tip);
-    left: 20%;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 98;
-    width: 220px;
-}
-
-.tooltip2:hover:before{
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 6px 0 6px;
-    bottom: 20px;
-    content: "";
-    left: 50%;
-    position: absolute;
-    z-index: 99;
-}
