@@ -32,10 +32,14 @@
 
 $class = '' ;
 
-if ( is_page_template( 'ac-testimonial-page.php' && !isset( $_GET[ 'testimonial_id'] ) ) ) {
+if ( is_page_template( 'page/ac-testimonial-page.php' ) && !isset( $_GET[ 'testimonial_id'] ) )  {
 	$class = 'testimonial-group' ;
 }
-	
+
+/* TESTS */
+echo "classe : " . $class . "\n" ;	
+/* FIN TESTS */
+
 if (isset( $_GET[ 'testimonial_id'] ) ) { 
 		$class = 'testimonial-single' ;
 }
