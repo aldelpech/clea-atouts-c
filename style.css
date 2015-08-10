@@ -98,7 +98,8 @@ body  {
 	#header {
 		margin-top: -45px;
 		min-height: 200px;  /* important to display the clipped path */
-		background-image: url('images/NK3752-Lavender.png');
+		/* background-image: url('images/NK3752-Lavender.png'); */
+		background-image: url('images/flipped-brushed-alum-NK12933.jpg');
 		/*
 		* !!!!
 		* see http://cssplant.com/clip-path-generator
