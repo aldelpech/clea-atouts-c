@@ -285,6 +285,7 @@ réglage couleurs
 
 #main {
 	background: ghostwhite;
+	border-radius: 0 0 15px 15px;
 }
 
 /**********************************************************
@@ -681,8 +682,8 @@ h3.widget-title {
 /* MY own broken line !!! */
 .home svg#BrokenLineBefore {
 	pointer-events: none;
-	/* background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png'); */
-	background: white url('images/brushed-alum-dark.png');
+	background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png'); 
+	/* background: white url('images/brushed-alum-dark.png');  */
 	margin-bottom: -7px;
 }
 
@@ -694,8 +695,8 @@ h3.widget-title {
 
 .home svg#BrokenLineAfter {
 	pointer-events: none;
-	/* background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png'); */
-	background: white url('images/brushed-alum-dark.png');
+	background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png');
+	/* background: white url('images/brushed-alum-dark.png');  */
 	margin-bottom: -37px;
 }
 
@@ -731,8 +732,8 @@ h3.widget-title {
 }
 
 .home .fonce {
-	/* background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png'); */
-	background: white url('images/brushed-alum-dark.png');
+	background: rgba(248,248,255,0.6) url('images/brushed-alum-dark.png'); 
+	/* background: white url('images/brushed-alum-dark.png'); */
 }
 
 .home.clair {

@@ -36,10 +36,6 @@ if ( is_page_template( 'page/ac-testimonial-page.php' ) && !isset( $_GET[ 'testi
 	$class = 'testimonial-group' ;
 }
 
-/* TESTS */
-echo "classe : " . $class . "\n" ;	
-/* FIN TESTS */
-
 if (isset( $_GET[ 'testimonial_id'] ) ) { 
 		$class = 'testimonial-single' ;
 }
