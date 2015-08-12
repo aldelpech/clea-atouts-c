@@ -5,19 +5,19 @@
 
 $do_not_duplicate = array();
 
-get_header(); // Loads the header.php template. ?>
+get_header( 'test1' ); // Loads the header.php template. ?>
 	<!-- Begin partenaire-nolte. --->
-	<section id="partenaire-nolte">	
+	<section id="partenaire-nolte" class="clair">	
 		<div class="bloc-left">
 			<h3>Atouts Cuisines, premier cuisiniste Nolte en Île de France</h3>
 		</div>
 		<div class="bloc-right">
-			<p><span><img class="nolte" src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/07/Logo_Nolte_Kuechen_200x83.png" alt="Atouts Cuisines, Partenaire Nolte Kuechen" width="200" height="83"/></span></p>
+			<p><span><img class="nolte" src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/Logo_Nolte_Kuechen_transp_200x83.png" alt="Atouts Cuisines, Partenaire Nolte Kuechen" width="200" height="83"/></span></p>
 		</div>
 	</section>
 	<!-- End partenaire-nolte. --->	
 	<!-- Begin page slider area. --->
-	<section id="page-slider">	
+	<section id="page-slider" class="clair">	
 	<?php
 	// generated with http://generatewp.com/wp_query/
 	$args = array (
@@ -76,8 +76,10 @@ get_header(); // Loads the header.php template. ?>
 	</section>
 	<!-- End page slider area. -->
 
-<hr />
-<section id="testimonials">
+<svg id="BrokenLineBefore" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 0 L66.5 50 L100 0"></path>
+</svg>
+<section id="testimonials" class="fonce">
 <h2>Les derniers témoignages de nos clients</h2>
 <div class="home-testimonial-boxes">
 	<?php 
@@ -116,23 +118,49 @@ get_header(); // Loads the header.php template. ?>
 </br>
 </section> <!-- End testimonials area. -->
 
-<hr> 	
-<section id="accompagnement">	
+	<svg id="BrokenLineAfter" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path id="a" d="M0 0 L66.5 50 L100 0"></path>
+		<path id="b" d="M0 105 L0 0 L66.5 50 L100 0 L100 105 Z"></path>
+	</svg>
+<section id="accompagnement" class="clair">	
 <h2>Nous vous accompagnons de A à Z !</h2>
 	<?php
-	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your_YouTube_url = 'odw7qXyzMmg' // V1 --- 'V-ymSFhhOP4'; AC v0
-	?>
-	<div class="wptuts-video-container">
-		<iframe src="//www.youtube.com/embed/<?php echo $your_YouTube_url; ?>" height="480" width="853" allowfullscreen="" frameborder="0"></iframe>
-	</div>
-</section><!-- accompagnement -->
-<hr> 	
-<section id="partenaires">	
-<h3>Les partenaires Atouts Cuisines</h3>
-<p> liste à confirmer avant insertion logos</p>
-<p>Siemens Neff Bosch Roblin Franke Blanco Silestone Corian Mirima</p>
-</section><!-- partenaires -->
-<?php // get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+	// see https://codex.wordpress.org/Function_Reference/wp_video_shortcode
 
+	$attr = array(
+		'mp4' 	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.mp4',
+		'ogv'	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.ogg',
+		'webm'	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.webm',
+		// 'height'	=> 405,
+		// 'width'  	=> 720,
+	);
+	
+	echo wp_video_shortcode( $attr ) ;
+	?>	
+	
+</section><!-- accompagnement -->
+<svg id="BrokenLineBefore" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 0 L66.5 50 L100 0"></path>
+</svg>
+<section id="partenaires" class="fonce">	
+<h3>Les partenaires Atouts Cuisines</h3>
+<p><span><img class="nolte" src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/Logo_Nolte_Kuechen_transp_200x83.png" alt="Atouts Cuisines, Partenaire Nolte Kuechen" width="200" height="83"/></span></p>
+<p><span class="partenaire">
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/partenaires-001.jpg" alt="Silestone, partenaire d'Atouts Cuisines" width="192" height="56"/> 
+
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/BLANCO-transp.png" alt="Blanco, partenaire d'Atouts Cuisines" width="137" height="25"/> 
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/bosch-logo-fr.png" alt="Bosch, partenaire d'Atouts Cuisines" width="128" height="43"/>
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/corian-transp.png" alt="Corian, partenaire d'Atouts Cuisines" width="176" height="80"/> 
+</span></p>
+<p><span class="partenaire">
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/partenaires-005.jpg" alt="Franke, partenaire d'Atouts Cuisines" width="130" height="42"/> 
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/siemens-transp1.png" alt="Siemens, partenaire d'Atouts Cuisines" width="140" height="80"/>
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/neff-transp.png" alt="Neff, partenaire d'Atouts Cuisines" width="145" height="80"/> 
+	<img src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/Roblin-transp.png" alt="Roblin, partenaire d'Atouts Cuisines" width="145" height="80"/> 
+</span></p>
+</section><!-- partenaires -->
+	<svg id="BrokenLineAfter" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path id="a" d="M0 0 L66.5 50 L100 0"></path>
+		<path id="b" d="M0 105 L0 0 L66.5 50 L100 0 L100 105 Z"></path>
+	</svg>
 <?php get_footer(); // Loads the footer.php template. ?>

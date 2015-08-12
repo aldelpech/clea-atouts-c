@@ -139,5 +139,4 @@ register_nav_menu('menu-test1',__( 'Menu Test 1' ));
 }
 
 
-
 ?>
