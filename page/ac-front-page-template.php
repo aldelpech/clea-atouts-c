@@ -124,33 +124,7 @@ get_header( 'test1' ); // Loads the header.php template. ?>
 	</svg>
 <section id="accompagnement" class="clair">	
 <h2>Nous vous accompagnons de A à Z !</h2>
-	<h4> self hosted (problems on firefox)</h4>
-	<?php
-	// see https://codex.wordpress.org/Function_Reference/wp_video_shortcode
 
-	$attr = array(
-		'mp4' 	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.mp4',
-		'ogv'	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.ogg',
-		'webm'	=> '/wp-content/uploads/2015/08/powtoon-e1gGifk2bhT.webm',
-		'poster'=> '/wp-content/uploads/2015/08/powtoon-poster.png',
-	);
-	
-	echo wp_video_shortcode( $attr ) ;
-	?>	
-	<h4> sur youtube avec wp_oembed</h4>	
-	<?php
- 	// https://codex.wordpress.org/Function_Reference/wp_oembed_get
-	$attr = array(
-		'width'		=> 960,
-		'height' 	=> 540,
-	);
-	$embed_code = wp_oembed_get( 'http://www.youtube.com/watch?v=-vpBQ8MdSZM&rel=0', $attr );
- 	?>
-	
- 	<div class="wptuts-video-container">
- 		<?php echo $embed_code; ?>
- 	</div>
-	<h4> sur youtube avec iframe</h4>	
 	<?php
  	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
 	$your2_YouTube_url = '-vpBQ8MdSZM?rel=0&amp;showinfo=0'; // AC v0
