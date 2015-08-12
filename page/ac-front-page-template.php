@@ -153,10 +153,10 @@ get_header( 'test1' ); // Loads the header.php template. ?>
 	<h4> sur youtube avec iframe</h4>	
 	<?php
  	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your2_YouTube_url = 'v=-vpBQ8MdSZM&rel=0'; // AC v0
+	$your2_YouTube_url = '-vpBQ8MdSZM?rel=0&amp;showinfo=0'; // AC v0
  	?>
  	<div class="wptuts-video-container">	
-	<iframe src="//www.youtube.com/embed/<?php echo $your2_YouTube_url; ?>" width="1280" height="720" allowfullscreen="" frameborder="0"></iframe>
+	<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php echo $your2_YouTube_url; ?>" frameborder="0" allowfullscreen></iframe>
 	</div>
 	
 </section><!-- accompagnement -->
