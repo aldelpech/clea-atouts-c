@@ -6,6 +6,17 @@
 $do_not_duplicate = array();
 
 get_header( 'test1' ); // Loads the header.php template. ?>
+
+	<!-- see http://cssplant.com/clip-path-generator 
+	-- this svg code is for firefox (see style.css) -->
+	<svg width="0" height="0">
+		<clipPath id="clipPolygon" clipPathUnits="objectBoundingBox">
+			<polygon points="0 149,705 129,1060 103,1060 1,0 0">
+			</polygon>
+		</clipPath>
+	</svg>
+
+
 	<!-- Begin partenaire-nolte. --->
 	<section id="partenaire-nolte" class="clair">	
 		<div class="bloc-left">

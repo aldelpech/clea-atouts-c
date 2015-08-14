@@ -14,7 +14,7 @@
  
 
 /*****************************************************
-* container (page) size
+* container (page) size & éléments liés à taille page
 ******************************************************/
 
 
@@ -52,6 +52,19 @@ body  {
     margin-bottom: 30px;
 	border: none;
 }
+
+.bouton-contact {
+	position: relative;
+    top: 18px;
+	right: -50px;
+}	
+
+.testimonial-group .bouton-contact,
+.home .bouton-contact {
+	position: relative;
+    top: 18px;
+	right: -120px;
+}	
  
 /*****************************************************
 * Header
@@ -73,6 +86,7 @@ body  {
 		border: none;
 		position: relative;
 		z-index: 125;
+		top: 3px;
 	}
 
 	#menu-secondary >.wrap {
@@ -191,11 +205,6 @@ hgroup#branding {
     text-decoration: none;
     color: #bc101a;
     font-size: 120%;
-    /* float: right; */
-	position: relative;
-    /* z-index: 10000; */
-    top: 18px;
-	right: -120px;
 }	
 
 
@@ -433,20 +442,30 @@ réglage couleurs
 	
 /* gallery
 ****************************************/
-	.gallery-row {
-	  padding-bottom: 20px;
-	}
+.gallery-row {
+  padding-bottom: 20px;
+}
 
-	.gallery img {
-	  padding: 3px !important;
-	  background: none !important;
-	  border: 1px solid #bc101a !important;
-	}
+.gallery img {
+  padding: 3px !important;
+  background: none !important;
+  border: 1px solid #bc101a !important;
+}
 
-	/* pour le texte sous une photo cliquée */
-	#TB_caption {
-		height: 45px !important;	
-	}
+/* pour le texte sous une photo cliquée */
+#TB_caption {
+	height: 45px !important;	
+	padding: 0 7px 0 20px !important ;
+}
+
+#TB_secondLine {
+	margin-top: -5px !important;
+}
+
+#TB_ImageOff {
+	padding-left: 20px; 
+}
+
 
 /******************************
 * Shortcode ultimate style 
@@ -553,10 +572,20 @@ background-color: transparent !important;
 		border-radius: 0 0 10px 10px;
 		-webkit-border-radius: 0 0 10px 10px;
 		-moz-border-radius: 0 0 10px 10px;
-		width: 99.9%;
 		border-style : solid;
 		border-width : 0 1px 1px 1px ;
 		border-color : #ddd;
+	}
+	
+	.testimonial-group #sidebar-subsidiary,
+	.home #sidebar-subsidiary {
+		width: 99.9%;
+		left: 0px;
+	}
+	
+	#sidebar-subsidiary {
+		width: 112%;
+		left: -40px;
 	}
 
 	#sidebar-subsidiary .widget {
@@ -590,6 +619,15 @@ background-color: transparent !important;
     border: 1px solid #bc101a;
 }
 
+.widget-title {
+	padding: 7px 7px;
+}
+
+.testimonial-group h3.widget-title,
+.home h3.widget-title {
+	font-size: 1.55em;
+}
+
 h3.widget-title {
 	background: none; 
 	border-radius: 10px 10px 0 0 ; 
@@ -598,7 +636,7 @@ h3.widget-title {
 	margin: 0px ;
 	color: #bc101a;
 	font-weight: 600;
-	font-size: 1.55em;
+	font-size: 1.35em;
 }
 
 .textwidget {
@@ -722,8 +760,8 @@ h3.widget-title {
 
 /* section partenaire-nolte */
 #partenaire-nolte {
-	padding: 120px 10px 30px 10px;
-	width: 95%;
+	padding: 120px 0 0 20px;
+	/* width: 95%; */
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -801,6 +839,7 @@ div.bloc {
 
 span.partenaire img {
 	margin-right: 5%;
+	max-height: 50px;
 }
 
 /* Home page VIDEO */ 

@@ -70,7 +70,7 @@ if (isset( $_GET[ 'testimonial_id'] ) ) {
 		</div>	
 
 		<header id="header">
-
+		
 			<div id="sidebar-header" class="sidebar">
 			<a href="../contactez-nous/" class="bouton-contact" target="_self" title="prendre rendez-vous"><i class="fa fa-envelope-o"></i>Contactez-nous<i class="fa fa-envelope-o"></i></a>
 			</div><!-- #sidebar-header -->
