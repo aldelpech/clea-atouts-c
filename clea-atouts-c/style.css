@@ -57,6 +57,7 @@ body  {
 	position: relative;
     top: 18px;
 	right: -50px;
+	z-index: 500;
 }	
 
 .testimonial-group .bouton-contact,

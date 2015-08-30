@@ -27,9 +27,18 @@
 
 </head>
 
+
 <?php
 
-$class = 'TEST-1' ;
+$class = '' ;
+
+if ( is_page_template( 'page/ac-testimonial-page.php' ) && !isset( $_GET[ 'testimonial_id'] ) )  {
+	$class = 'testimonial-group' ;
+}
+
+if (isset( $_GET[ 'testimonial_id'] ) ) { 
+		$class = 'testimonial-single' ;
+}
 ?>
 
 <body <?php body_class( $class ); hybrid_body_attributes(); ?>>
@@ -56,16 +65,17 @@ $class = 'TEST-1' ;
 
 		<div class="ald-unique-logo">		
 			<a href="<?php echo get_home_url() ; ?>" >
-			<img class="logo-ac" src="<?php echo $value[ "logo_upload" ]; ?>" alt="logo" width="<?php echo $value[ "logo_width" ]; ?>" height="<?php echo $value[ "logo_height" ]; ?>"/>
+			<img class="logo-ac" src="<?php echo $value[ "logo_upload" ]; ?>" alt="logo" title="retour à l'accueil" width="<?php echo $value[ "logo_width" ]; ?>" height="<?php echo $value[ "logo_height" ]; ?>"/>
 			</a>
 		</div>	
 
+		
 		<header id="header">
 
 			<div id="sidebar-header" class="sidebar">
-			<a href="../contactez-nous/" class="bouton-contact" target="_self" title="prendre rendez-vous"><i class="fa fa-envelope-o"></i>Contactez-nous<i class="fa fa-envelope-o"></i></a>
+				<a href="../contactez-nous/" class="bouton-contact" target="_self" title="prendre rendez-vous"><i class="fa fa-envelope-o"></i>Contactez-nous<i class="fa fa-envelope-o"></i></a>
 			</div><!-- #sidebar-header -->
-			
+		
 			<hgroup id="branding">
 				<?php // do_atomic( 'open_header' ); // crée un "hook" "repertoire_open_header ?>
 				<?php // hybrid_site_title(); ?>
@@ -74,3 +84,5 @@ $class = 'TEST-1' ;
 
 		</header><!-- #header -->		
 		<div id="main">
+
+			<?php get_template_part( 'breadcrumbs' ); // Loads the breadcrumbs.php template. ?>

@@ -46,32 +46,6 @@ function clea_atout_c_enqueue_styles() {
 	if ( is_page_template( 'page/ac-front-page-template.php' ) ) {
 		wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css' , array( '25px' ) );
 	}
-	
-	 
-	if ( is_page_template( 'page/ac-test2-template.php' ) ) { 
-		/* see http://tympanus.net/Development/SectionSeparators/  */
-		wp_enqueue_style( 'normalize',  get_stylesheet_directory_uri() . '/css/normalize.css' ); 
-		wp_enqueue_style( 'demo',  get_stylesheet_directory_uri() . '/css/demo.css' );
-		wp_enqueue_style( 'icons',  get_stylesheet_directory_uri() . '/css/icons.css' );
-		wp_enqueue_style( 'home-2',  get_stylesheet_directory_uri() . '/css/home-test-2.css' );
-
-		// deregister main style sheet of the theme
-		// wp_deregister_style( '25px' );
-	} 
-
-	if ( is_page_template( 'page/ac-test3-template.php' ) ) { 
-		wp_enqueue_style( 'home-3',  get_stylesheet_directory_uri() . '/css/home-test-3.css' );
-	}
-
-	if ( is_page_template( 'page/ac-test4-template.php' ) ) { 
-	/* see http://tympanus.net/Development/SectionSeparators/  */
-	wp_enqueue_style( 'home-4',  get_stylesheet_directory_uri() . '/css/home-test-4.css' );
-	} 
-
-	if ( is_page_template( 'page/ac-test5-template.php' ) ) { 
-	/* see http://tympanus.net/Development/SectionSeparators/  */
-	wp_enqueue_style( 'home-5',  get_stylesheet_directory_uri() . '/css/home-test-5.css' );
-	}
 }
 	
 function clea_atout_c_enqueue_scripts() {
@@ -137,6 +111,11 @@ function dbdb_body_classes($classes) {
 function clea_atout_c_register_my_menu() {
 register_nav_menu('menu-test1',__( 'Menu Test 1' ));
 }
+
+/* comes from cakifo functions.php for flexslider arguments 
+*  to use the filter see http://themehybrid.com/docs/cakifo_flexslider_args
+*/
+
 
 
 ?>
