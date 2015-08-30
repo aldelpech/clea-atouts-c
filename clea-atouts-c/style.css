@@ -32,13 +32,15 @@
 	}	
 	
 	.breadcrumb-trail {
-		margin: 50px 0 50px;
+		margin: 50px 0 20px;
 	}
 	
 }
 
 h1 {
 	line-height: 1.2;
+	margin-bottom: 35px !important;
+	font-variant: small-caps;
 }
 
 body  {
@@ -548,6 +550,7 @@ réglage couleurs
     bottom: 0px;
     left: 0px;
     line-height: 1.1;
+	margin-top: 5px;
 }
 
 .su-box.points-forts {
@@ -845,9 +848,10 @@ span.partenaire img {
 
 /* Home page VIDEO */ 
 /* for the homepage video */
-.embed-wrap iframe {
+
+/* .embed-wrap iframe {
 	height: 340px;
-}
+} */
 
 .embed-wrap {
 	margin-left: auto;

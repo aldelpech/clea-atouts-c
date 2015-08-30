@@ -21,7 +21,7 @@
 	// var_dump( $liste ) ;
 	?>
 
-	<h2>Témoignages de clients d'Atouts Cuisines</h2>
+	<h1>Témoignages de clients d'Atouts Cuisines</h1>
 	<section class="choix-groupe" id="testnnn">	
 	<p class="categorie">catégorie sélectionnée : <?php echo $deno[ $group ] ?></p>
 		<?php foreach ($deno as $key => $value) {
