@@ -83,6 +83,11 @@ if (isset( $_GET[ 'testimonial_id'] ) ) {
 			</hgroup><!-- #branding -->
 
 		</header><!-- #header -->		
+		<svg id="BrokenLineHeader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+			<path id="a" d="M0 0 L66.5 50 L100 0"></path>
+			<path id="b" d="M0 105 L0 0 L66.5 50 L100 0 L100 105 Z"></path>
+		</svg>
 		<div id="main">
+
 
 			<?php get_template_part( 'breadcrumbs' ); // Loads the breadcrumbs.php template. ?>

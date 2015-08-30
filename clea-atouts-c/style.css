@@ -32,7 +32,7 @@
 	}	
 	
 	.breadcrumb-trail {
-		margin: 50px 0 20px;
+		margin: 0px 0 20px;
 	}
 	
 }
@@ -59,7 +59,6 @@ body  {
 	position: relative;
     top: 18px;
 	right: -50px;
-	z-index: 500;
 }	
 
 .testimonial-group .bouton-contact,
@@ -114,26 +113,33 @@ body  {
 		
 	#header {
 		margin-top: -45px;
-		min-height: 200px;  /* important to display the clipped path */
-		/* background-image: url('images/NK3752-Lavender.png'); */
-		background-image: url('images/flipped-brushed-alum-NK12933.jpg');
-		/*
-		* !!!!
-		* see http://cssplant.com/clip-path-generator
-		* to to generate code for firefox and iOS
-		*/
-		/*Chrome,Safari*/
-		-webkit-clip-path: polygon(0px 149px,705px 190px,1060px 132px,1060px 0px,0px 0px);
+		min-height: 160px;  
+		background-image: url('images/flipped-transparent-NK12933_Nischenverkleidung_Baumstamm.png');
+		background-color: transparent;
 
-		/*Firefox*/
-		clip-path: url("#clipPolygon");
-
-		/* iOS support inline encoded svg file*/
-		-webkit-mask: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIwIiBoZWlnaHQ9IjAiPgogIDxjbGlwUGF0aCBpZD0ic3ZnQ2xpcCI+CiAgICA8cGF0aCBpZD0ic3ZnUGF0aCIgZD0iTTAsMTQ5IEw3MDUsMTkwIDEwNjAsMTMyIDEwNjAsMCAwLDAgeiIvPgogIDwvY2xpcFBhdGg+CiAgPHBhdGggaWQ9InN2Z01hc2siIGQ9Ik0wLDE0OSBMNzA1LDE5MCAxMDYwLDEzMiAxMDYwLDAgMCwwIHoiICAvPgo8L3N2Zz4=) no-repeat;
 		background-size: cover;
 		background-repeat: none;
 		background-position: top right;
 		padding: 10px;  
+	}
+	
+	svg#BrokenLineHeader {
+		pointer-events: none;
+		background: none ;
+		margin-top: -60px;
+		margin-bottom: 20px;
+	}
+
+	#BrokenLineHeader path#a {
+		fill: none;
+	   stroke: #ddd;
+		stroke-width: 1;
+	}
+
+	#BrokenLineHeader path#b {
+		fill: ghostwhite; /* color of section just AFTER this one */
+		stroke: none;
+		stroke-width: 0;
 	}
 
 	#sidebar-header {
@@ -764,7 +770,7 @@ h3.widget-title {
 
 /* section partenaire-nolte */
 #partenaire-nolte {
-	padding: 120px 0 0 20px;
+	padding: 60px 0 0 20px;
 	/* width: 95%; */
 	margin-left: auto;
 	margin-right: auto;
