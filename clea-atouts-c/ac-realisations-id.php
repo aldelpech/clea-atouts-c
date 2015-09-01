@@ -47,4 +47,4 @@
 	</section>
 
 
-	</div><!-- #content -->
+	<!--</div><!-- #content -->

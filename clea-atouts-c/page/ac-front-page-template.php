@@ -153,10 +153,9 @@ jQuery(".temporise").fadeIn('fast',
 	</svg>
 <section id="accompagnement" class="clair">	
 <h2>Nous vous accompagnons de A à Z !</h2>
-
 	<?php
  	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your2_YouTube_url = '-vpBQ8MdSZM?rel=0&amp;showinfo=0'; // AC v0
+	$your2_YouTube_url = 'rj_DZ_zXT44?rel=0&amp;showinfo=0'; // AC v0
  	?>
  	<div class="wptuts-video-container">	
 	<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php echo $your2_YouTube_url; ?>" frameborder="0" allowfullscreen></iframe>
