@@ -56,16 +56,12 @@ body  {
 }
 
 .bouton-contact {
-	position: relative;
-    top: 18px;
-	right: -50px;
+    float: right;
 }	
 
 .testimonial-group .bouton-contact,
 .home .bouton-contact {
-	position: relative;
-    top: 18px;
-	right: -120px;
+	float: right;
 }	
  
 /*****************************************************
@@ -929,6 +925,10 @@ span.partenaire img {
 		margin-right: 2%;
 	}
 	
+	#header, #main, #footer {
+		padding: 0 ; 
+	}
+	
 }
 
 @media only screen and (max-width: 480px) {
@@ -938,8 +938,8 @@ span.partenaire img {
 	}
 	
 	.bouton-contact {
-		font-size: 110%;
-		right: 0;
+		font-size: 90%;
+		padding: 0;
 	}
 	
 	#sidebar-subsidiary {
