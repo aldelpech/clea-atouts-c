@@ -80,6 +80,25 @@ body  {
   float: left;
 }
 
+svg#BrokenLineHeader {
+	pointer-events: none;
+	background: none ;
+	margin-top: -60px;
+	margin-bottom: 20px;
+}
+
+#BrokenLineHeader path#a {
+	fill: none;
+   stroke: #ddd;
+	stroke-width: 1;
+}
+
+#BrokenLineHeader path#b {
+	fill: ghostwhite; /* color of section just AFTER this one */
+	stroke: none;
+	stroke-width: 0;
+}
+
 @media only screen and (min-width: 760px) {
 
 	#menu-secondary {
@@ -123,24 +142,7 @@ body  {
 		padding: 10px;  
 	}
 	
-	svg#BrokenLineHeader {
-		pointer-events: none;
-		background: none ;
-		margin-top: -60px;
-		margin-bottom: 20px;
-	}
 
-	#BrokenLineHeader path#a {
-		fill: none;
-	   stroke: #ddd;
-		stroke-width: 1;
-	}
-
-	#BrokenLineHeader path#b {
-		fill: ghostwhite; /* color of section just AFTER this one */
-		stroke: none;
-		stroke-width: 0;
-	}
 
 	#sidebar-header {
 		margin-top: 10px;
@@ -618,6 +620,12 @@ background-color: transparent !important;
 	background: ghostwhite;
 	position: relative;
 	border: none ;
+	/* https://css-tricks.com/using-flexbox/ */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
 #sidebar-subsidiary .widget {
@@ -625,7 +633,7 @@ background-color: transparent !important;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	height: 240px;
+	/* height: 240px; */
     border: 1px solid #bc101a;
 }
 
@@ -884,4 +892,68 @@ span.partenaire img {
 	width: 100%;
 	height: 100%;
 }	
+
+/***********************************************************
+* Responsive
+***********************************************************/
+@media only screen and (max-width: 760px) {
+	#sidebar-header {
+		width: 50%;
+		float: right;
+		display: table;
+	}
+
+	#container {
+		padding: 0;
+	}
+	
+	.ald-unique-logo a img {
+		max-width: 45%;
+	}
+	
+	#menu-secondary {
+		background-color: transparent !important;
+	}
+	
+	.menu-toggle {
+		font-size: 1.75rem;
+		color: #bc101a;
+	}
+
+	#sidebar-subsidiary {
+		margin: 0;
+		padding: 0;
+	}
+	
+	#sidebar-subsidiary .widget {
+		margin-right: 2%;
+	}
+	
+}
+
+@media only screen and (max-width: 480px) {
+
+	#sidebar-header {
+		width: 55%;
+	}
+	
+	.bouton-contact {
+		font-size: 110%;
+		right: 0;
+	}
+	
+	#sidebar-subsidiary {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	#sidebar-subsidiary .widget {
+		margin-bottom: 2%;
+		margin-right: 0;
+		
+}
+	
+}
 

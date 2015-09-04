@@ -9,7 +9,7 @@
 			'menu_id'         => 'menu-secondary-items',
 			'menu_class'      => 'menu-items',
 			'fallback_cb'     => '',
-			'items_wrap'      => '<h3 class="menu-toggle" title="' . esc_attr__( 'Secondary Navigation', 'unique' ) . '">' . __( 'Secondary Navigation', 'unique' ) . '</h3><div class="wrap"><ul id="%1$s" class="%2$s">%3$s</ul></div>' 
+			'items_wrap'      => '<h3 class="menu-toggle" title="' . esc_attr__( 'Secondary Navigation', 'clea-base' ) . '">Menu de navigation</h3><div class="wrap"><ul id="%1$s" class="%2$s">%3$s</ul></div>' 
 		)
 	);
 
