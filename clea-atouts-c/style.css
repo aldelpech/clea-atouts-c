@@ -446,7 +446,9 @@ réglage couleurs
   cursor: default;
 }
 
-	
+.flexslider figure {
+	margin-bottom: 0;
+}	
 /* gallery
 ****************************************/
 .gallery-row {
@@ -912,8 +914,9 @@ span.partenaire img {
 	}
 	
 	.menu-toggle {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 		color: #bc101a;
+		margin-top: 5px;
 	}
 
 	#sidebar-subsidiary {
@@ -928,7 +931,27 @@ span.partenaire img {
 	#header, #main, #footer {
 		padding: 0 ; 
 	}
+
+	.bloc-left h3 {
+		font-size: 100%;
+	}
+
+	#partenaire-nolte .bloc-left {
+		max-width: 53%;
+	}
 	
+	span.partenaire img {
+		max-width: 19%;
+	} 
+	
+	img.nolte {
+		max-width: 35%;
+	}
+	
+	.flexslider .slide-caption {
+		line-height: 1.1;
+	}
+		
 }
 
 @media only screen and (max-width: 480px) {
@@ -953,7 +976,26 @@ span.partenaire img {
 		margin-bottom: 2%;
 		margin-right: 0;
 		
-}
+	}
+	
+
+	.flexslider .slide-caption {
+		display: block ;
+	}
+
+	.flexslider .slide-caption h2 {
+		font-size: 100% ;
+		line-height: 1.1;
+	}
+
+	.flexslider .slide-caption .entry-summary {
+		display: none ;
+	}	
+	
+	.flexslider .slide-caption .bouton-savoir {
+        font-size: 80%;
+	}
+
 	
 }
 
