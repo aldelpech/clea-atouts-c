@@ -147,7 +147,7 @@ svg#BrokenLineHeader {
 
 
 	#sidebar-header {
-		margin-top: 57px;
+		margin-top: 10px;
 	}
 	
 	.topbar {
@@ -218,9 +218,6 @@ hgroup#branding {
     text-decoration: none;
     color: #bc101a;
     font-size: 120%;
-	border: 2px solid #bc101a;
-    font-weight: 600;
-
 }	
 
 
@@ -292,9 +289,6 @@ réglage couleurs
 #menu-subsidiary li.current-menu-item a {
 	background-color: #bc101a;
 	color: #f0eb2c ;
-	border-radius: 5px !important;
-	-webkit-border-radius: 5px !important;
-	-moz-border-radius: 5px !important;
 }
 
 #footer {
@@ -464,11 +458,7 @@ réglage couleurs
 /* gallery
 ****************************************/
 .gallery-row {
-  padding-bottom: 2%;
-}
-
-figcaption {
-    line-height: 1.2;
+  padding-bottom: 20px;
 }
 
 .gallery img {
@@ -847,7 +837,7 @@ h3.widget-title {
 }
 
 #partenaire-nolte .bloc-left {
-	max-width: 57%;
+	max-width: 73%;
 	text-align:left; /* on rétablit l'alignement du texte */
 }
 
@@ -953,7 +943,7 @@ span.partenaire img {
 	}
 
 	#partenaire-nolte .bloc-left {
-		max-width: 60%;
+		max-width: 53%;
 	}
 	
 	span.partenaire img {
@@ -983,22 +973,11 @@ span.partenaire img {
 	div#TB_closeWindow {
 		display: none;
 	}
+	
 }
-
-@media only screen and (max-width: 768px) {
-	.su-tabs-nav span {
-		display: inline-block !important;
-	}
-}	
-
-
 
 @media only screen and (max-width: 480px) {
 
-	#menu-subsidiary li a {
-		margin: 0 ; 
-	}
-	
 	#sidebar-header {
 		width: 55%;
 	}
@@ -1047,18 +1026,6 @@ span.partenaire img {
 		font-size: 70%;
 	}
 	
-	.su-tabs-nav span {
-		border-left: 1px solid #bc101a !important; 
-		border-right: 1px solid #bc101a !important;
-		border-top: 1px solid #bc101a !important;
-		margin-right: 1px !important;
-		padding: 1px !important;
-		min-height: 0 !important;
-	}
-	
-	.ald-unique-logo {
-		top: 0;
-	}
 }
 
 /********************************************************
