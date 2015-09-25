@@ -12,7 +12,7 @@ get_header(); // Loads the header.php template.
 	<!-- Begin partenaire-nolte. --->
 	<section id="partenaire-nolte" class="clair">	
 		<div class="bloc-left">
-			<h3>Atouts Cuisines, premier cuisiniste Nolte en Île de France</h3>
+			<h3>Atouts cuisines, le plus ancien et le premier cuisiniste Nolte en île de France</h3>
 		</div>
 		<div class="bloc-right">
 			<p><span><img class="nolte" src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/Logo_Nolte_Kuechen_transp_200x83.png" alt="Atouts Cuisines, Partenaire Nolte Kuechen" width="200" height="83"/></span></p>
@@ -155,7 +155,7 @@ jQuery(".temporise").fadeIn('fast',
 <h2>Nous vous accompagnons de A à Z !</h2>
 	<?php
  	// http://code.tutsplus.com/tutorials/creating-a-shortcode-for-responsive-video--wp-32469
-	$your2_YouTube_url = 'rj_DZ_zXT44?rel=0&amp;showinfo=0'; // AC v0
+	$your2_YouTube_url = 'RNXz8OLekSU?rel=0&amp;showinfo=0'; // AC v0
  	?>
  	<div class="wptuts-video-container">	
 	<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php echo $your2_YouTube_url; ?>" frameborder="0" allowfullscreen></iframe>

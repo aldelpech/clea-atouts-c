@@ -118,6 +118,8 @@
 	border-radius: 5px;
 	margin-top: 8px;
 	margin-bottom: 8px;
+	float: left;
+    margin-right: 5px;
 }	
 
 .testimonial-col h5 {
@@ -146,6 +148,7 @@
 .testimonial-col img.temoin {
 	max-width: 20%;
 	border-radius: 50%;
+	float: right;
 }
 
 
