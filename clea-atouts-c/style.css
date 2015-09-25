@@ -125,12 +125,6 @@ svg#BrokenLineHeader {
 		-moz-border-radius: 15px;
 		border-radius: 15px;
 	}
-
-	#menu-secondary li a[href="#"]:hover {
-		text-decoration: none;
-		color: #ffffff;
-	}	
-	
 		
 	#header {
 		margin-top: -45px;
