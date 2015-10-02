@@ -79,7 +79,7 @@ body  {
 svg#BrokenLineHeader {
 	pointer-events: none;
 	background: none ;
-	margin-top: -60px;
+	margin-top: -50px;
 	margin-bottom: 20px;
 }
 
@@ -145,9 +145,18 @@ svg#BrokenLineHeader {
 	}
 	
 
-
+	.testimonial-group #sidebar-header,
+	.home #sidebar-header {
+		margin-top: 54px; 
+	}	
+	
+	.testimonial-group #header,
+	.home #header {
+		min-height: 115px;
+	}
+	
 	#sidebar-header {
-		margin-top: 57px;
+		margin-top: 48px; 		
 	}
 	
 	.topbar {
@@ -370,6 +379,13 @@ réglage couleurs
 #content li li:first-child {	/*first li */
   margin-top: 10px;
 }
+
+
+a:hover {
+    color: #bc101a;
+	font-weight: bold;
+}
+
 	
 /* SLIDER 
 /***************************/
