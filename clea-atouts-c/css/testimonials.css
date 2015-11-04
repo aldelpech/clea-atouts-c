@@ -137,6 +137,8 @@
 .testimonial-col p.budget {
 	color: black;
 	font-family: Consolas, "Times New Roman", Verdana;
+	display: block;
+    clear: both;
 }
 
 .testimonial-col a.content-btn {
