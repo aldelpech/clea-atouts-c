@@ -12,7 +12,7 @@ get_header(); // Loads the header.php template.
 	<!-- Begin partenaire-nolte. --->
 	<section id="partenaire-nolte" class="clair">	
 		<div class="bloc-left">
-			<h3>Atouts cuisines, le plus ancien et le premier cuisiniste Nolte en île de France</h3>
+			<h3>Atouts cuisines, le plus <span style="color: #bc101a; font-style: normal;">ancien</span> et le <span style="color: #bc101a; font-style: normal;">premier</span> cuisiniste Nolte en île de France</h3>
 		</div>
 		<div class="bloc-right">
 			<p><span><img class="nolte" src="<?php esc_attr( get_home_url() ) ; ?>/wp-content/uploads/2015/08/Logo_Nolte_Kuechen_transp_200x83.png" alt="Atouts Cuisines, Partenaire Nolte Kuechen" width="200" height="83"/></span></p>
