@@ -944,10 +944,16 @@ span.partenaire img {
 		max-width: 45%;
 	}
 	
+	#menu-secondary ul ul,
 	#menu-secondary {
 		background-color: transparent !important;
 	}
-	
+
+	#menu-secondary li a {
+		border-right: none;
+		color: #bc101a !important;
+	}
+
 	.menu-toggle {
 		font-size: 1.5rem;
 		color: #bc101a;
@@ -1014,6 +1020,17 @@ span.partenaire img {
 	.su-tabs-nav span {
 		display: inline-block !important;
 	}
+	
+	#menu-primary .wrap, #menu-secondary .wrap {
+		background: transparent ; 
+	}
+	
+	#menu-secondary li a, 
+	#menu-secondary ul ul {
+		background-color: transparent;
+		color: #bc101a;
+	}
+	
 }	
 
 
