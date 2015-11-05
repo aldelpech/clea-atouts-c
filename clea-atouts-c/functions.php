@@ -36,6 +36,9 @@ add_action( 'init', 'clea_atout_c_register_my_menu' );
 
 /* add custom colors to the editor */
 add_filter('tiny_mce_before_init', 'clea_atout_c_mce4_options');
+
+/* add-on for contact form 7 */
+add_action( 'wp_enqueue_scripts', 'clea_atout_c_add_on_contact_form_7' );
  
 function clea_atout_c_enqueue_styles() {
 
@@ -175,6 +178,35 @@ function clea_atout_c_mce4_options($init) {
 	return $init;
 }
 
+function clea_atout_c_add_on_contact_form_7() {
+
+		// disable load js and load css for wpcf7
+		add_filter( 'wpcf7_load_js', '__return_false' );
+		add_filter( 'wpcf7_load_css', '__return_false' );
+		
+		
+		// enable cf7 js and css on specific pages
+		// wpcf7_enqueue_scripts() and wpcf7_enqueue_styles() must be called before wp_head()
+				// only on the contact form page
+		
+		if ( is_page( 'contactez-nous' ) ){
+			
+			if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+				wpcf7_enqueue_scripts();
+			}
+		 
+			if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+				wpcf7_enqueue_styles();
+			}
+			
+			if ( function_exists( 'wpcf7_support_html5_fallback' ) ) {
+				add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+			}
+			
+		} 	
+		
+
+}
 
 
 ?>
