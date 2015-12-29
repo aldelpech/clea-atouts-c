@@ -40,7 +40,7 @@ function ac_list_testimonial( $group ){
 		$groupe = 'WHERE group_id = ' . (int)$group ;
 	}
 
-	$liste_groupe = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."hms_testimonials_group_meta` " . $groupe, ARRAY_A); 
+	$liste_groupe = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."hms_testimonials_group_meta` " . $groupe . " ORDER BY `testimonial_id` DESC", ARRAY_A); 
 
 	return $liste_groupe ;
 }
@@ -71,7 +71,7 @@ function ac_list_testimonial_groups() {
 function ac_testimonial_everything( $Id ) {
 	global $wpdb ;
 	
-	$extrait = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."hms_testimonials_cf_meta` WHERE testimonial_id = ". (int)$Id ." AND `key_id` = 1", ARRAY_A);
+	$extrait = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."hms_testimonials_cf_meta` WHERE testimonial_id = ". (int)$Id ." AND `key_id` = 1" , ARRAY_A);
 	$budget = $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."hms_testimonials_cf_meta` WHERE testimonial_id = ". (int)$Id ." AND `key_id` = 2", ARRAY_A);
 
 	$value_extrait = $extrait[ 0 ][ 'value'] ;
